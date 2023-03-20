@@ -12,7 +12,7 @@ function App() {
       <NavBar></NavBar>
 	     <Routes location={window.location} key={window.location.pathname}>
           <Route path="/" element={<Home></Home>}/>
-          <Route path="/*" element={<NotFound></NotFound>}/>
+          <Route path="*" element={<NotFound></NotFound>}/>
 
           </Routes>
 		  <Footer></Footer>
