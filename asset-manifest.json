@@ -1,16 +1,16 @@
 {
   "files": {
     "main.css": "/hosfad-dev/static/css/main.f658ed16.css",
-    "main.js": "/hosfad-dev/static/js/main.978ff42f.js",
+    "main.js": "/hosfad-dev/static/js/main.c33c81a1.js",
     "static/media/cat.gif": "/hosfad-dev/static/media/cat.824723d8c3152943950c.gif",
     "static/media/hero-image.png": "/hosfad-dev/static/media/hero-image.93c2b5cd76c80653515b.png",
     "static/media/speed.gif": "/hosfad-dev/static/media/speed.29648b0b31f03d8f422a.gif",
     "index.html": "/hosfad-dev/index.html",
     "main.f658ed16.css.map": "/hosfad-dev/static/css/main.f658ed16.css.map",
-    "main.978ff42f.js.map": "/hosfad-dev/static/js/main.978ff42f.js.map"
+    "main.c33c81a1.js.map": "/hosfad-dev/static/js/main.c33c81a1.js.map"
   },
   "entrypoints": [
     "static/css/main.f658ed16.css",
-    "static/js/main.978ff42f.js"
+    "static/js/main.c33c81a1.js"
   ]
 }
