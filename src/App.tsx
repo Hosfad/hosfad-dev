@@ -11,8 +11,8 @@ function App() {
     <div className="App overflow-x-hidden">
       <NavBar></NavBar>
 	     <Routes location={window.location} key={window.location.pathname}>
-          <Route path="*" element={<Home></Home>}/>
-          <Route path="/*" element={<NotFound></NotFound>}/>
+          <Route path="/hosfad-dev" element={<Home></Home>}/>
+          <Route path="/hosfad-dev/*" element={<NotFound></NotFound>}/>
 
           </Routes>
 		  <Footer></Footer>
