@@ -2,6 +2,13 @@
 @tailwind components;
 @tailwind utilities;
 
+.gopher{
+  display: inline-block;
+  position: relative;
+  z-index: 1;
+  padding: 2em;
+  margin: -2em;
+}
 body {
 	@apply dark:bg-gray7 dark:text-gray1;
     background: linear-gradient(176deg, rgba(18,24,27,1) 50%, rgba(32,39,55,1) 100%);
@@ -49,7 +56,7 @@ body {
   h4,
   h5,
   h6 {
-    @apply font-display font-normal text-white;
+    @apply font-normal text-white font-display;
   }
 
   .btn {
@@ -59,14 +66,14 @@ body {
   }
   
   .btn-sm {
-    @apply px-3 py-1 text-xs font-sans uppercase font-bold;
+    @apply px-3 py-1 font-sans text-xs font-bold uppercase;
   }
   .btn-lg {
     @apply px-5 py-3 text-xl;
   }
   
   .btn-transparent {
-    @apply bg-black bg-opacity-20 text-white hover:bg-opacity-40;
+    @apply text-white bg-black bg-opacity-20 hover:bg-opacity-40;
   }
   
   .btn-sans {
@@ -86,7 +93,7 @@ body {
     
 }
 .box {
-  @apply bg-gray6 shadow-lg border-l-4 border-gray5 p-6 rounded-r-lg;
+  @apply p-6 border-l-4 rounded-r-lg shadow-lg bg-gray6 border-gray5;
 }
 .box-green {
   @apply border-green-500;
