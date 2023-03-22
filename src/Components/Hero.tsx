@@ -18,7 +18,6 @@ function Hero() {
   const dateOfBirth = new Date("2000-07-27");
   const currentAge = Date.now() - dateOfBirth.getTime();
   const age = new Date(currentAge).getFullYear() - 1970;
-  console.log(age);
   useEffect(() => {
     const hiddenElemnts = document.querySelectorAll(".hide");
     const slideElements = document.querySelectorAll(".left-start");
