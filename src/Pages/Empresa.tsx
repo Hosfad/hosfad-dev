@@ -1,10 +1,30 @@
-import React, { useEffect } from "react";
+import React, { useCallback, useEffect, useState } from "react";
 import { fadeObserver, slideObserver } from "../Observer";
 // @ts-ignore
 import heroImage from "../assets/hero-image.png";
 import ServiceCard from "../Components/ServiceCard";
 import ImgReveal from "../Components/ImgReveal";
+import ImageViewer from "react-simple-image-viewer";
+
 function Empresa() {
+  const [currentImage, setCurrentImage] = useState(0);
+  const [isViewerOpen, setIsViewerOpen] = useState(false);
+  const images = [
+    "https://media.discordapp.net/attachments/1089158225288511548/1089177264429740124/image.png",
+    "https://media.discordapp.net/attachments/1089158225288511548/1089177438824706139/image.png?width=1143&height=676",
+    "https://media.discordapp.net/attachments/1089158225288511548/1089177563823362099/image.png?width=1020&height=676",
+  ];
+
+  const openImageViewer = useCallback((index: number) => {
+    setCurrentImage(index);
+    setIsViewerOpen(true);
+  }, []);
+
+  const closeImageViewer = () => {
+    setCurrentImage(0);
+    setIsViewerOpen(false);
+  };
+
   useEffect(() => {
     const hiddenElemnts = document.querySelectorAll(".hide");
     const slideElements = document.querySelectorAll(".left-start");
@@ -40,7 +60,6 @@ function Empresa() {
         </div>
       </div>
 
-      {/* About me */}
       <div className="mx-auto mt-12 text-center w-fit snap-proximity">
         <a href="#tech" className="no-underline">
           <h2 className="inline-block px-6 py-4 text-6xl font-bold bg-red-500 shadow-xl text-bold text-gray7">
@@ -97,27 +116,38 @@ function Empresa() {
           </p>
           <div className="text-center">
             <a href="https://t.me/UnieUniversidadBot" target={"_blank"}>
-            <h2 className="inline-block px-6 py-4 text-xl font-bold text-center bg-green-500 shadow-xl text-bold text-gray7">
-              Prueba el bot
-            </h2>
+              <h2 className="inline-block px-6 py-4 text-xl font-bold text-center bg-green-500 shadow-xl text-bold text-gray7">
+                Prueba el bot
+              </h2>
             </a>
-      
           </div>
 
           <img
             className="mx-auto mt-8"
-            src="https://media.discordapp.net/attachments/1089158225288511548/1089177264429740124/image.png"
+            src={images[0]}
+            onClick={() => openImageViewer(0)}
           ></img>
           <img
             className="mx-auto mt-8"
-            src="https://media.discordapp.net/attachments/1089158225288511548/1089177438824706139/image.png?width=1143&height=676"
+            src={images[1]}
+            onClick={() => openImageViewer(1)}
           ></img>
           <img
             className="mx-auto mt-8"
-            src="https://media.discordapp.net/attachments/1089158225288511548/1089177563823362099/image.png?width=1020&height=676"
+            src={images[2]}
+            onClick={() => openImageViewer(2)}
           ></img>
         </div>
       </div>
+      {isViewerOpen && (
+        <ImageViewer
+          src={images}
+          currentIndex={currentImage}
+          disableScroll={false}
+          closeOnClickOutside={true}
+          onClose={closeImageViewer}
+        />
+      )}
     </>
   );
 }
