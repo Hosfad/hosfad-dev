@@ -97,7 +97,7 @@ function Empresa() {
           </p>
           <div className="text-center">
             <a href="https://t.me/UnieUniversidadBot" target={"_blank"}>
-            <h2 className="inline-block px-6 py-4 text-xl font-bold text-center bg-yellow-500 shadow-xl text-bold text-gray7">
+            <h2 className="inline-block px-6 py-4 text-xl font-bold text-center bg-green-500 shadow-xl text-bold text-gray7">
               Prueba el bot
             </h2>
             </a>
