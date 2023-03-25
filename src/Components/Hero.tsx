@@ -6,7 +6,8 @@ import heroImage from "../assets/hero-image.png";
 import speedImg from "../assets/speed.gif";
 // @ts-ignore
 import catImg from "../assets/cat.gif";
-
+// @ts-ignore
+import crazyCatImg from "../assets/crazy-cat.gif";
 import { FaAccusoft, FaJava, FaRobot, FaServer } from "react-icons/fa";
 
 import ImgReveal from "./ImgReveal";
@@ -88,13 +89,13 @@ function Hero() {
             </h2>
           </h1>
         </div>
-        <div className="lg:mt-0 lg:col-span-5 lg:flex">
+        <div className="hidden lg:mt-0 md:visable lg:visable lg:col-span-5 lg:flex">
           <img className="ml-28" src={heroImage}></img>
         </div>
       </div>
 
       {/* About me */}
-      <div className="mt-12 text-center snap-proximity">
+      <div className="mx-auto mt-12 text-center w-fit snap-proximity">
         <a href="#about" className="no-underline">
           <h2 className="inline-block px-6 py-4 text-6xl font-bold bg-red-500 shadow-xl text-bold text-gray7">
             About me
@@ -104,7 +105,9 @@ function Hero() {
         <div className="hide">
           <h1 className="mt-6 text-3xl" id="about">
             Im a {age} year old{" "}
-            <span className="gradient-text">Computer science</span> student from{" "}
+            <span className="gradient-text">
+              <ImgReveal startOffset={50} translateY={-350} src={crazyCatImg}>Computer science</ImgReveal>
+              </span> student from{" "}
             <span className="gradient-text-blue">Israel.</span>
             <br></br>
             Currently studying in Madrid,{" "}
@@ -189,14 +192,6 @@ function Hero() {
           </div>
         </div>
 
-        <h1 className="mt-8 text-2xl">
-          Proud founder of{" "}
-          <span className="gradient-text">Sabia enterprises</span>
-        </h1>
-        <ImgReveal startOffset={750} translateY={-130} src="https://media.tenor.com/ASGuOCPGrKEAAAAS/kekw-kek.gif">
-        <h1 className="mb-8 ">
-          Soon™ (Winter 2020)
-        </h1></ImgReveal>
       </div>
     </>
   );

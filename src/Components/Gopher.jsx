@@ -16,8 +16,8 @@ function Gopher() {
 
       const rightAngle = Math.atan2(mouseY - rightCenterY, mouseX - rightCenterX) * (180 / Math.PI);
       const leftAngle = Math.atan2(mouseY - leftCenterY, mouseX - leftCenterX) * (180 / Math.PI);
-      rightEye.setAttribute("transform", `rotate(${rightAngle  -45}, ${rightCenterX}, ${rightCenterY})`);
-      leftEye.setAttribute("transform", `rotate(${leftAngle -45 }, ${leftCenterX}, ${leftCenterY})`);
+      rightEye.setAttribute("transform", `rotate(${rightAngle - 90}, ${rightCenterX}, ${rightCenterY})`);
+      leftEye.setAttribute("transform", `rotate(${leftAngle - 90 }, ${leftCenterX}, ${leftCenterY})`);
    
     });
     
