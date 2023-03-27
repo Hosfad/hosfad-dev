@@ -8,7 +8,6 @@ import Empresa from "./Pages/Empresa";
 // @ts-ignore
 import Home from "./Pages/Home";
 import NotFound from "./Pages/NotFound";
-import PalabrasTemp from "./Pages/PalabrasTemp";
 import Projects from "./Pages/Projects/Projects";
 function App() {
   return (
@@ -18,7 +17,6 @@ function App() {
         <Route path="/" element={<Home></Home>} />
         <Route path="/projects" element={<Projects></Projects>} />
         <Route path="/empresa" element={<Empresa></Empresa>} />
-        <Route path="/juego-de-palabras" element={<PalabrasTemp></PalabrasTemp>} />
         <Route path="/*" element={<NotFound></NotFound>} />
       </Routes>
       <div className="fixed z-10 w-20 bottom-2 left-2 md:w-32 h-42">
